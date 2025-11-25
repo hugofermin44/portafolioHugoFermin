@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Técnico - Hugo Fermin</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-before: always; }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: #333;
+        }
+        
+        .cover {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 80px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .cover h1 {
+            font-size: 3.5em;
+            margin: 0 0 20px 0;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .cover .subtitle {
+            font-size: 1.5em;
+            margin: 30px 0 60px 0;
+            opacity: 0.95;
+        }
+        
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 50px 0;
+        }
+        
+        .icon-item {
+            text-align: center;
+        }
+        
+        .icon-symbol {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+        
+        .author {
+            font-size: 2.5em;
+            margin-top: 80px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        .content {
+            padding: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin: 50px 0;
+        }
+        
+        .section h2 {
+            color: #1e3a5f;
+            font-size: 2em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2c5282;
+            padding-bottom: 10px;
+        }
+        
+        .intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        
+        .project {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #2c5282;
+            border-radius: 5px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #1e3a5f;
+            margin-bottom: 8px;
+        }
+        
+        .project-link {
+            color: #2c5282;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid #2c5282;
+        }
+        
+        .skill-category h3 {
+            color: #1e3a5f;
+            font-size: 1.2em;
+            margin: 0 0 15px 0;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            color: #555;
+        }
+        
+        .skill-category li:before {
+            content: "▹ ";
+            color: #2c5282;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #2c5282;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .highlight-box h3 {
+            color: #1e3a5f;
+            margin-top: 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #2c5282;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 10px 20px 0;
+            font-weight: 600;
+        }
+        
+        .button:hover {
+            background: #1e3a5f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portada -->
+    <div class="cover">
+        <h1>Mi Portafolio Técnico:<br>11 Proyectos</h1>
+        <div class="subtitle">Python · IA · IoT · QlikView · Business Intelligence · Automatización</div>
+        
+        <div class="icons">
+            <div class="icon-item">
+                <div class="icon-symbol">🔧</div>
+                <div>ESP32</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-symbol">📊</div>
+                <div>Analytics</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-symbol">🐍</div>
+                <div>Python</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-symbol">🔗</div>
+                <div>IoT</div>
+            </div>
+        </div>
+        
+        <div class="author">HUGO FERMIN</div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="content">
+        <div class="section">
+            <h2>Introducción</h2>
+            <div class="intro">
+                <p>En los últimos meses buscando empleo, también me enfoqué en buscar la forma de crecer profesionalmente, aprendiendo por mi cuenta nuevas tecnologías y desarrollando proyectos reales en Python, IA, IoT y Business Intelligence.</p>
+                <p>Hoy comparto una colección de los <strong>11 proyectos</strong> que construí.</p>
+            </div>
+        </div>
+
+        <div class="section page-break">
+            <h2>🚀 Proyectos Publicados</h2>
+            
+            <div class="project">
+                <div class="project-title">1️⃣ Dashboard IoT con Microcontrolador ESP32 + IA</div>
+                <a href="https://lnkd.in/gvXmfY7S" class="project-link">👉 https://lnkd.in/gvXmfY7S</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">2️⃣ Estación Meteorológica (Microcontrolador · SQL · Python · Web)</div>
+                <a href="https://lnkd.in/g_PPbMRq" class="project-link">👉 https://lnkd.in/g_PPbMRq</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">3️⃣ Comparador de Precios con Python, Flask y Pandas</div>
+                <a href="https://lnkd.in/gUiD5kts" class="project-link">👉 https://lnkd.in/gUiD5kts</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">4️⃣ Sistema de Análisis de Competencia con Google Maps API</div>
+                <a href="https://lnkd.in/gJcfGzHS" class="project-link">👉 https://lnkd.in/gJcfGzHS</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">5️⃣ Dashboard 3D de Bodega (Prototipo en Python)</div>
+                <a href="https://lnkd.in/gif8vRa9" class="project-link">👉 https://lnkd.in/gif8vRa9</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">6️⃣ Servidor Web en Ubuntu (WSL2) con Apache</div>
+                <a href="https://lnkd.in/gbm2BEex" class="project-link">👉 https://lnkd.in/gbm2BEex</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">7️⃣ Predicción de Demanda con IA Local (Prophet + Mistral-7B)</div>
+                <a href="https://lnkd.in/gHFDRjcq" class="project-link">👉 https://lnkd.in/gHFDRjcq</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">8️⃣ De Datos a Decisiones: QlikView + Python + Widgets</div>
+                <a href="https://lnkd.in/gJMaNV8K" class="project-link">👉 https://lnkd.in/gJMaNV8K</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">9️⃣ Dashboard de Ventas en QlikView</div>
+                <a href="https://lnkd.in/gV2ZifJP" class="project-link">👉 https://lnkd.in/gV2ZifJP</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">🔟 Buscador Local con IA LLaMA en Google Cloud (VM)</div>
+                <a href="https://lnkd.in/gB2SDASY" class="project-link">👉 https://lnkd.in/gB2SDASY</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">1️⃣1️⃣ Portal Web Personal para Gestión de Actividades (Flask)</div>
+                <a href="https://lnkd.in/gdcRCF6T" class="project-link">👉 https://lnkd.in/gdcRCF6T</a>
+            </div>
+        </div>
+
+        <div class="section page-break">
+            <h2>Mi Perfil Profesional Hoy</h2>
+            <div class="intro">
+                <p>He fortalecido un perfil híbrido que combina experiencia en manufactura, electrónica y pruebas, con habilidades avanzadas en desarrollo, automatización y análisis de datos:</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🔹 Ingeniería y Pruebas</h3>
+                    <ul>
+                        <li>Test Engineer</li>
+                        <li>Validación y pruebas funcionales</li>
+                        <li>Análisis de fallas</li>
+                        <li>Linux, redes Cisco</li>
+                        <li>Electrónica</li>
+                        <li>Microcontroladores (ESP32/Arduino)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔹 Automatización y Desarrollo</h3>
+                    <ul>
+                        <li>Scripts Python</li>
+                        <li>Flujos técnicos</li>
+                        <li>Integraciones con APIs</li>
+                        <li>Dashboards internos</li>
+                        <li>Automatizaciones</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔹 Datos y Visualización</h3>
+                    <ul>
+                        <li>QlikView</li>
+                        <li>SQL</li>
+                        <li>Análisis de datos</li>
+                        <li>Dashboards técnicos y operativos</li>
+                        <li>Enfoque en manufactura</li>
+                        <li>Toma de decisiones basadas en datos</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔹 Desarrollo Web e IA</h3>
+                    <ul>
+                        <li>Flask</li>
+                        <li>Herramientas internas</li>
+                        <li>Análisis predictivo</li>
+                        <li>IA local y en la nube</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💡 Mi Valor Agregado</h3>
+                <p>Creo firmemente que en algún equipo necesitan un perfil capaz de unir ingeniería, software, hardware, datos y solución técnica o que sea un puente para esas mismas áreas.</p>
+                <p><strong>Soy un perfil adaptable, responsable y orientado a resultados.</strong></p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 50px 0;">
+            <button class="button" onclick="window.print()">📄 Descargar como PDF</button>
+        </div>
+    </div>
+</body>
+</html>
