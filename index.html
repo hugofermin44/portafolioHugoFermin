@@ -106,9 +106,63 @@
             margin-bottom: 40px;
         }
         
+        .opportunity-box {
+            background: #e8f4f8;
+            border-left: 4px solid #2c5282;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .opportunity-box h3 {
+            color: #1e3a5f;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        
+        .opportunity-box ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .opportunity-box li {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-top: 3px solid #2c5282;
+        }
+        
+        .tech-stack h3 {
+            color: #1e3a5f;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .tech-item {
+            padding: 10px 0;
+        }
+        
+        .tech-item strong {
+            color: #2c5282;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
         .project {
             margin: 25px 0;
-            padding: 20px;
+            padding: 25px;
             background: #f8f9fa;
             border-left: 4px solid #2c5282;
             border-radius: 5px;
@@ -116,15 +170,37 @@
         
         .project-title {
             font-weight: 600;
-            font-size: 1.1em;
+            font-size: 1.2em;
             color: #1e3a5f;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .project-subtitle {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .project-detail {
+            margin: 8px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .project-detail strong {
+            color: #2c5282;
+            margin-right: 5px;
         }
         
         .project-link {
             color: #2c5282;
             text-decoration: none;
             font-size: 0.95em;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
         }
         
         .project-link:hover {
@@ -181,21 +257,67 @@
             margin-top: 0;
         }
         
+        .cta-section {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .cta-section h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        
+        .cta-section p {
+            font-size: 1.1em;
+            margin: 20px 0 30px 0;
+        }
+        
         .button {
             display: inline-block;
-            background: #2c5282;
-            color: white;
+            background: white;
+            color: #2c5282;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
-            margin: 20px 10px 20px 0;
+            margin: 10px;
             font-weight: 600;
             cursor: pointer;
             border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         
         .button:hover {
-            background: #1e3a5f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .button.secondary:hover {
+            background: white;
+            color: #2c5282;
+        }
+        
+        @media (max-width: 768px) {
+            .cover h1 {
+                font-size: 2.5em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -224,7 +346,7 @@
             </div>
         </div>
         
-        <div class="author">Ing.Hugo Fermin Ibarra Garza</div>
+        <div class="author">Ing. Hugo Fermin Ibarra Garza</div>
     </div>
 
     <!-- Contenido -->
@@ -235,6 +357,50 @@
                 <p>En los últimos meses buscando empleo, también me enfoqué en buscar la forma de crecer profesionalmente, aprendiendo por mi cuenta nuevas tecnologías y desarrollando proyectos reales en Python, IA, IoT y Business Intelligence.</p>
                 <p>Hoy comparto una colección de los <strong>12 proyectos</strong> que construí.</p>
             </div>
+            
+            <div class="opportunity-box">
+                <h3>🎯 ¿Qué tipo de oportunidad busco?</h3>
+                <p>Busco roles donde pueda aportar mi perfil híbrido que une ingeniería, desarrollo y datos. Posiciones como:</p>
+                <ul>
+                    <li><strong>Test Engineer</strong> con automatización y desarrollo</li>
+                    <li><strong>Data Engineer</strong> / Business Intelligence Analyst</li>
+                    <li><strong>Python Developer</strong> con experiencia en manufactura</li>
+                    <li><strong>Roles técnicos en IoT</strong>, automatización o BI</li>
+                    <li><strong>Posiciones que requieran integrar</strong> hardware, software y análisis de datos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Stack Técnico</h2>
+            <div class="tech-stack">
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <strong>💻 Lenguajes</strong>
+                        Python, SQL, JavaScript, C++ (Arduino/ESP32)
+                    </div>
+                    <div class="tech-item">
+                        <strong>🔧 Hardware/IoT</strong>
+                        ESP32, Arduino, sensores, electrónica
+                    </div>
+                    <div class="tech-item">
+                        <strong>📊 Data/BI</strong>
+                        QlikView, Pandas, SQL Server, visualización de datos
+                    </div>
+                    <div class="tech-item">
+                        <strong>🤖 IA/ML</strong>
+                        Prophet, Mistral, LLaMA, APIs OpenAI, Groq
+                    </div>
+                    <div class="tech-item">
+                        <strong>☁️ Infraestructura</strong>
+                        Linux, Apache, Google Cloud, WSL2, Docker
+                    </div>
+                    <div class="tech-item">
+                        <strong>🌐 Web</strong>
+                        Flask, HTML/CSS, APIs REST
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section page-break">
@@ -242,63 +408,99 @@
             
             <div class="project">
                 <div class="project-title">1️⃣ Agente Conversacional de Business Intelligence con IA</div>
-                <div style="margin-bottom: 8px; color: #555;">📊 Transformando el análisis de datos con IA aplicada</div>
-                <a href="https://www.linkedin.com/posts/activity-7404029399802548225-RvLf?utm_source=share&utm_medium=member_desktop" class="project-link" target="_blank">👉 Ver proyecto en LinkedIn</a>
+                <div class="project-subtitle">📊 Transformando el análisis de datos con IA aplicada</div>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Democratizar acceso a datos sin necesidad de conocer SQL</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Python, Flask, SQL Server, IA (Groq/Mistral), arquitectura híbrida cloud/local</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Consultas en lenguaje natural con resultados interpretables, accesible para perfiles no técnicos</div>
+                <a href="https://www.linkedin.com/posts/activity-7404029399802548225-RvLf" class="project-link" target="_blank">👉 Ver proyecto en LinkedIn</a>
             </div>
 
             <div class="project">
                 <div class="project-title">2️⃣ Dashboard IoT con Microcontrolador ESP32 + IA</div>
-                <a href="https://lnkd.in/gvXmfY7S" class="project-link" target="_blank">👉 https://lnkd.in/gvXmfY7S</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Monitoreo en tiempo real de sensores con análisis inteligente</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> ESP32, Python, IA para análisis predictivo, dashboard web</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Visualización de datos IoT con insights automáticos generados por IA</div>
+                <a href="https://lnkd.in/gvXmfY7S" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">3️⃣ Estación Meteorológica (Microcontrolador · SQL · Python · Web)</div>
-                <a href="https://lnkd.in/g_PPbMRq" class="project-link" target="_blank">👉 https://lnkd.in/g_PPbMRq</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Captura, almacenamiento y visualización de datos climáticos</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Microcontrolador, sensores DHT22/BMP280, SQL Server, Python, interfaz web</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Sistema completo end-to-end desde hardware hasta visualización</div>
+                <a href="https://lnkd.in/g_PPbMRq" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">4️⃣ Comparador de Precios con Python, Flask y Pandas</div>
-                <a href="https://lnkd.in/gUiD5kts" class="project-link" target="_blank">👉 https://lnkd.in/gUiD5kts</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Análisis de competitividad de precios en tiempo real</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Python, Flask, Pandas, web scraping, visualización de datos</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Toma de decisiones de pricing basada en datos del mercado</div>
+                <a href="https://lnkd.in/gUiD5kts" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">5️⃣ Sistema de Análisis de Competencia con Google Maps API</div>
-                <a href="https://lnkd.in/gJcfGzHS" class="project-link" target="_blank">👉 https://lnkd.in/gJcfGzHS</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Análisis geoespacial de competidores y ubicaciones estratégicas</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Python, Google Maps API, análisis de datos, visualización geográfica</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Insights de mercado basados en ubicación para decisiones estratégicas</div>
+                <a href="https://lnkd.in/gJcfGzHS" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">6️⃣ Dashboard 3D de Bodega (Prototipo en Python)</div>
-                <a href="https://lnkd.in/gif8vRa9" class="project-link" target="_blank">👉 https://lnkd.in/gif8vRa9</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Visualización intuitiva del estado de inventario en almacén</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Python, visualización 3D, análisis de ocupación espacial</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Optimización de espacios y gestión visual de inventario</div>
+                <a href="https://lnkd.in/gif8vRa9" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">7️⃣ Servidor Web en Ubuntu (WSL2) con Apache</div>
-                <a href="https://lnkd.in/gbm2BEex" class="project-link" target="_blank">👉 https://lnkd.in/gbm2BEex</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Configuración de entorno de desarrollo local con Linux</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Ubuntu WSL2, Apache, configuración de servidores</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Ambiente de desarrollo profesional en Windows</div>
+                <a href="https://lnkd.in/gbm2BEex" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">8️⃣ Predicción de Demanda con IA Local (Prophet + Mistral-7B)</div>
-                <a href="https://lnkd.in/gHFDRjcq" class="project-link" target="_blank">👉 https://lnkd.in/gHFDRjcq</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Forecasting de demanda con IA corriendo localmente</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Prophet (Facebook), Mistral-7B, Python, series temporales</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Predicciones precisas sin dependencia de APIs externas, datos privados</div>
+                <a href="https://lnkd.in/gHFDRjcq" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">9️⃣ De Datos a Decisiones: QlikView + Python + Widgets</div>
-                <a href="https://lnkd.in/gJMaNV8K" class="project-link" target="_blank">👉 https://lnkd.in/gJMaNV8K</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Integración de análisis avanzado con herramientas BI tradicionales</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> QlikView, Python, widgets personalizados, automatización</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Dashboards interactivos con capacidades analíticas extendidas</div>
+                <a href="https://lnkd.in/gJMaNV8K" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">🔟 Dashboard de Ventas en QlikView</div>
-                <a href="https://lnkd.in/gV2ZifJP" class="project-link" target="_blank">👉 https://lnkd.in/gV2ZifJP</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Visualización ejecutiva de métricas de ventas</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> QlikView, modelado de datos, KPIs de negocio</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Análisis de ventas en tiempo real para toma de decisiones gerenciales</div>
+                <a href="https://lnkd.in/gV2ZifJP" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">1️⃣1️⃣ Buscador Local con IA LLaMA en Google Cloud (VM)</div>
-                <a href="https://lnkd.in/gB2SDASY" class="project-link" target="_blank">👉 https://lnkd.in/gB2SDASY</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Búsqueda semántica en documentos privados con IA</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> LLaMA, Google Cloud VM, embeddings, búsqueda vectorial</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Motor de búsqueda inteligente para información corporativa</div>
+                <a href="https://lnkd.in/gB2SDASY" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
 
             <div class="project">
                 <div class="project-title">1️⃣2️⃣ Portal Web Personal para Gestión de Actividades (Flask)</div>
-                <a href="https://lnkd.in/gdcRCF6T" class="project-link" target="_blank">👉 https://lnkd.in/gdcRCF6T</a>
+                <div class="project-detail"><strong>🎯 Problema:</strong> Sistema personalizado de gestión y seguimiento de tareas</div>
+                <div class="project-detail"><strong>⚙️ Stack:</strong> Flask, Python, base de datos, autenticación</div>
+                <div class="project-detail"><strong>💡 Impacto:</strong> Aplicación web completa desarrollada desde cero</div>
+                <a href="https://lnkd.in/gdcRCF6T" class="project-link" target="_blank">👉 Ver proyecto</a>
             </div>
         </div>
 
@@ -362,8 +564,11 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin: 50px 0;">
-            <button class="button" onclick="window.print()">📄 Descargar como PDF</button>
+        <div class="cta-section">
+            <h3>📬 Abierto a Nuevas Oportunidades</h3>
+            <p>¿Buscas un perfil técnico versátil que una ingeniería, desarrollo y datos?</p>
+            <a href="https://www.linkedin.com/in/hugofermin" class="button" target="_blank">💼 Conecta en LinkedIn</a>
+            <button class="button secondary" onclick="window.print()">📄 Descargar PDF</button>
         </div>
     </div>
 </body>
